@@ -52,7 +52,7 @@ export default function Home() {
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`mb-4 p-4 rounded-lg ${
+            className={`mb-4 p-4 rounded-lg text-black ${
               message.role === 'assistant'
                 ? 'bg-gray-100 mr-8'
                 : 'bg-blue-100 ml-8'
@@ -71,7 +71,7 @@ export default function Home() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="メッセージを入力..."
-          className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
         />
         <button
           type="submit"
