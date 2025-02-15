@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Chat Application
 
-## Getting Started
+このプロジェクトは、Next.js 15とOpenAI APIを使用して構築されたAIチャットアプリケーションです。
 
-First, run the development server:
+## 機能
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- AIとのインタラクティブなチャット機能
+- モダンなUIデザイン（Tailwind CSS使用）
+- リアルタイムレスポンス
+
+## 技術スタック
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- OpenAI API
+- Radix UI Icons
+
+## プロジェクト構成
+
+```
+├── eslint.config.mjs      # ESLint設定
+├── next-env.d.ts         # Next.js用の型定義
+├── next.config.ts        # Next.js設定
+├── package.json          # プロジェクト依存関係
+├── postcss.config.mjs    # PostCSS設定
+├── public/              # 静的ファイル
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── src/                 # ソースコード
+│   └── app/
+│       ├── api/
+│       │   └── chat/
+│       │       └── route.ts  # チャットAPI実装
+│       ├── favicon.ico
+│       ├── globals.css      # グローバルスタイル
+│       ├── layout.tsx       # レイアウトコンポーネント
+│       └── page.tsx         # メインページ
+├── tailwind.config.ts   # Tailwind CSS設定
+└── tsconfig.json        # TypeScript設定
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 環境構築
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. リポジトリのクローン:
+```bash
+git clone [your-repository-url]
+cd ai-chat-app
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. 依存パッケージのインストール:
+```bash
+npm install
+```
 
-## Learn More
+3. 環境変数の設定:
+`.env.local`ファイルをプロジェクトのルートに作成し、必要な環境変数を設定:
+```
+OPENAI_API_KEY=your_api_key_here
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. 開発サーバーの起動:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてアプリケーションを確認できます。
