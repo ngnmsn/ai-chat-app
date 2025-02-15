@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen max-w-2xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">AIチャット</h1>
+      <h1 className="text-2xl font-bold mb-4 text-foreground/30 dark:text-foreground/100">AIチャット</h1>
       
       <div className="flex-1 overflow-y-auto mb-4">
         {messages.map((message, index) => (
