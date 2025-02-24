@@ -36,11 +36,21 @@ export default function Home() {
         throw new Error('API request failed');
       }
 
-      const data = await response.json();
-      setMessages(prev => [...prev, data]);
+      // テキストとして応答を読み取る
+      const responseText = await response.text();
+      
+      // AI応答をメッセージリストに追加
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: responseText
+      }]);
     } catch (error) {
       console.error('Error:', error);
-      // Optionally show error message to user
+      // エラーメッセージをユーザーに表示
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: '申し訳ありません。エラーが発生しました。'
+      }]);
     }
   };
 
