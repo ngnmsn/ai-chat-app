@@ -1,6 +1,6 @@
 # AI Chat Application
 
-このプロジェクトは、Next.js 15とOpenAI APIを使用して構築されたAIチャットアプリケーションです。
+このプロジェクトは、Next.js 15とAWS Bedrockを使用して構築されたAIチャットアプリケーションです。
 
 ## 機能
 
@@ -14,7 +14,7 @@
 - React 19
 - TypeScript
 - Tailwind CSS
-- OpenAI API
+- AWS Bedrock
 - Radix UI Icons
 
 ## プロジェクト構成
@@ -60,7 +60,11 @@ npm install
 3. 環境変数の設定:
 `.env.local`ファイルをプロジェクトのルートに作成し、必要な環境変数を設定:
 ```
-OPENAI_API_KEY=your_api_key_here
+# AWS Bedrock設定
+AWS_ACCESS_KEY_ID=your_aws_access_key_id
+AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+BEDROCK_AGENT_ID=your_bedrock_agent_id
+BEDROCK_AGENT_ALIAS_ID=your_bedrock_agent_alias_id
 ```
 
 4. 開発サーバーの起動:

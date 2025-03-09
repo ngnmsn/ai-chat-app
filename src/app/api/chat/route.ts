@@ -1,7 +1,7 @@
 import { BedrockAgentRuntimeClient, InvokeAgentCommand } from "@aws-sdk/client-bedrock-agent-runtime";
 
 const client = new BedrockAgentRuntimeClient({
-  region: "us-east-1", // バージニア北部リージョン
+  region: "ap-northeast-1", // 東京リージョン
   credentials: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID || '',
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || ''
