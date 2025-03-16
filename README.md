@@ -1,77 +1,72 @@
-# AI Chat Application
+# AI Chat App
 
-このプロジェクトは、Next.js 15とAWS Bedrockを使用して構築されたAIチャットアプリケーションです。モダンなUIでAIとのシームレスな対話を実現します。
+プライベートなAIチャットアプリケーション。モダンなUIと使いやすいインターフェースを備えています。
+
+## プロジェクト概要
+
+このアプリケーションはNext.jsを使用して構築された、AIとの会話を可能にするチャットインターフェースです。サイドメニュー付きのモダンなレイアウトで、将来的にはドキュメントアップロード機能も提供予定です。
 
 ## 機能
 
-- AIとのインタラクティブなチャット機能
-- モダンなUIデザイン（Tailwind CSS使用）
-- リアルタイムレスポンス
-- レスポンシブデザイン（モバイル対応）
-- マークダウン形式のメッセージ表示対応
-
-## 技術スタック
-
-- Next.js 15（App Router使用）
-- React 19
-- TypeScript
-- Tailwind CSS
-- AWS Bedrock
-- Radix UI Icons
+- AIとチャットする機能
+- レスポンシブなモダンUI
+- ドキュメントアップロード機能（開発中）
 
 ## プロジェクト構成
 
 ```
-├── eslint.config.mjs      # ESLint設定
-├── next-env.d.ts         # Next.js用の型定義
-├── next.config.ts        # Next.js設定
-├── package.json          # プロジェクト依存関係
-├── postcss.config.mjs    # PostCSS設定
-├── public/              # 静的ファイル
-│   ├── file.svg
-│   ├── globe.svg
-│   ├── next.svg
-│   ├── vercel.svg
-│   └── window.svg
-├── src/                 # ソースコード
-│   └── app/
-│       ├── api/
-│       │   └── chat/
-│       │       └── route.ts  # チャットAPI実装
-│       ├── favicon.ico
-│       ├── globals.css      # グローバルスタイル
-│       ├── layout.tsx       # レイアウトコンポーネント
-│       └── page.tsx         # メインページ
-├── tailwind.config.ts   # Tailwind CSS設定
-└── tsconfig.json        # TypeScript設定
+ai-chat-app/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx              # メインチャットインターフェース
+│   │   ├── upload/
+│   │   │   └── page.tsx          # ドキュメントアップロード画面（実装予定）
+│   │   └── api/
+│   │       └── chat/
+│   │           └── route.ts      # チャットAPI
+│   │
+│   ├── components/
+│   │   ├── Header.tsx            # ヘッダーコンポーネント
+│   │   └── Sidebar.tsx           # サイドバーコンポーネント
+│   │
+│   └── ...
+├── public/
+│   └── ...
+├── package.json
+└── ...
 ```
 
-## 環境構築
+## 技術スタック
 
-1. リポジトリのクローン:
-```bash
-git clone [your-repository-url]
-cd ai-chat-app
-```
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Radix UI
 
-2. 依存パッケージのインストール:
+## 開発方法
+
+### インストール
+
 ```bash
 npm install
 ```
 
-3. 環境変数の設定:
-`.env.local`ファイルをプロジェクトのルートに作成し、必要な環境変数を設定:
-```
-# AWS Bedrock設定
-AWS_ACCESS_KEY_ID=your_aws_access_key_id
-AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
-BEDROCK_AGENT_ID=your_bedrock_agent_id  # エージェント使用時のみ
-BEDROCK_AGENT_ALIAS_ID=your_bedrock_agent_alias_id  # エージェント使用時のみ
-```
+### 開発サーバーの起動
 
-4. 開発サーバーの起動:
 ```bash
 npm run dev
 ```
 
-ブラウザで [http://localhost:3000](http://localhost:3000) を開いてアプリケーションを確認できます。
+### ビルド
+
+```bash
+npm run build
+```
+
+## 画面構成
+
+- **ヘッダー**: アプリケーション全体の上部に表示されるナビゲーションバー
+- **サイドメニュー**: 画面左側に表示される、各機能へのナビゲーションメニュー
+  - チャット: AIとの会話ができる画面
+  - ドキュメントアップロード: RAG用のファイルをアップロードする画面（開発中）
