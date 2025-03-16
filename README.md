@@ -1,16 +1,18 @@
 # AI Chat Application
 
-このプロジェクトは、Next.js 15とAWS Bedrockを使用して構築されたAIチャットアプリケーションです。
+このプロジェクトは、Next.js 15とAWS Bedrockを使用して構築されたAIチャットアプリケーションです。モダンなUIでAIとのシームレスな対話を実現します。
 
 ## 機能
 
 - AIとのインタラクティブなチャット機能
 - モダンなUIデザイン（Tailwind CSS使用）
 - リアルタイムレスポンス
+- レスポンシブデザイン（モバイル対応）
+- マークダウン形式のメッセージ表示対応
 
 ## 技術スタック
 
-- Next.js 15
+- Next.js 15（App Router使用）
 - React 19
 - TypeScript
 - Tailwind CSS
@@ -63,8 +65,8 @@ npm install
 # AWS Bedrock設定
 AWS_ACCESS_KEY_ID=your_aws_access_key_id
 AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
-BEDROCK_AGENT_ID=your_bedrock_agent_id
-BEDROCK_AGENT_ALIAS_ID=your_bedrock_agent_alias_id
+BEDROCK_AGENT_ID=your_bedrock_agent_id  # エージェント使用時のみ
+BEDROCK_AGENT_ALIAS_ID=your_bedrock_agent_alias_id  # エージェント使用時のみ
 ```
 
 4. 開発サーバーの起動:
