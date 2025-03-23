@@ -8,7 +8,7 @@ export default function Sidebar() {
   
   const menuItems = [
     { name: 'チャット', path: '/' },
-    { name: 'ドキュメントアップロード', path: '/upload' },
+    { name: 'ドキュメント', path: '/documents' },
   ];
   
   return (
